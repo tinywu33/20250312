@@ -1,0 +1,113 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "private_outputs": true,
+      "provenance": [],
+      "authorship_tag": "ABX9TyOAFhSoDzEebzsbosfM4s3d",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/tinywu33/20250312/blob/main/20250312\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import folium"
+      ],
+      "metadata": {
+        "id": "aPrr5gcGBPio"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "folium.Map(location=[22.6273,120.3014],zoom_start=16)"
+      ],
+      "metadata": {
+        "id": "wm17qkRZBvWE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import geocoder"
+      ],
+      "metadata": {
+        "id": "M8x5DsGsEAW9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "geocoder.osm(\"高雄市\", headers={\"user-agent\": \"My App\"}).latlng"
+      ],
+      "metadata": {
+        "id": "pdj-dHAcEEXy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gps=geocoder.osm(\"台中市\", headers={\"user-agent\": \"My App\"}).latlng\n",
+        "folium.Map(location=gps,zoom_start=16)"
+      ],
+      "metadata": {
+        "id": "lIz7DPskFgCz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "dkUqFi5eEptW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Z6QH9FEE_xA8"
+      },
+      "outputs": [],
+      "source": [
+        "import turtle\n",
+        "\n",
+        "turtle.speed('fastest')\n",
+        "for i in range(12):\n",
+        "  turtle.forward(10)\n",
+        "  turtle.left(30)\n",
+        "  turtle.circle(100)"
+      ]
+    }
+  ]
+}
